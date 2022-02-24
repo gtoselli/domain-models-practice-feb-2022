@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"esModuleInterop":true,
+		"strictNullChecks": true,
+		"plugins": [
+			{
+				"transform": "ts-auto-mock/transformer",
+				"cacheBetweenTests": false
+			}
+		]
+	}
+}
