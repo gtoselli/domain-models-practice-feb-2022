@@ -1,6 +1,6 @@
 import { Event } from "../common/event.class";
 import { Cmd } from "../common/cmd.class";
-import { CmdHandlers } from "../common/cmd-handlers.provider";
+import { CmdHandler } from "../common/cmd-handler.provider";
 import { ReserveSeatCmdHandler } from "../seats/commands/reserve-seat.cmd-handler";
 import { SeatsState } from "../seats/seatsState";
 import { SeatInitialisedEvent } from "../seats/events/seat-initialised.event";
@@ -16,7 +16,7 @@ describe("Marco Heimeshoff homework", () => {
   };
 
   const When = (cmd: Cmd) => {
-    const handler = new CmdHandlers(
+    const handler = new CmdHandler(
       //@ts-ignore
       new ReserveSeatCmdHandler(seatsState, {
         publish: (e: Event) => published_events.push(e),
